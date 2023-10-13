@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-httpd-service
+spec:
+  selector:
+    app: lblhttpd
+  ports:
+  - protocol: TCP
+    port: 80
+    nodePort: 30002
+  type: NodePort
